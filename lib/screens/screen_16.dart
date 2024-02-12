@@ -32,7 +32,7 @@ class Screen_Sixteen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: MyFeatures(
+                    child: MyFeature_S16(
                         imageAddress: 'assets/images/image_2.png',
                         title: 'Free Live Webinars',
                         description:
@@ -42,7 +42,7 @@ class Screen_Sixteen extends StatelessWidget {
                     width: width * 0.075,
                   ),
                   Expanded(
-                    child: MyFeatures(
+                    child: MyFeature_S16(
                         imageAddress: 'assets/images/image_3.png',
                         title: 'Teacher Training',
                         description:
@@ -56,7 +56,7 @@ class Screen_Sixteen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: MyFeatures(
+                    child: MyFeature_S16(
                         imageAddress: 'assets/images/image_4.png',
                         title: 'Professional Development for schools',
                         description:
@@ -66,7 +66,7 @@ class Screen_Sixteen extends StatelessWidget {
                     width: width * 0.075,
                   ),
                   Expanded(
-                    child: MyFeatures(
+                    child: MyFeature_S16(
                         imageAddress: 'assets/images/image_5.png',
                         title: 'Personalised PE lessons',
                         description: 'All Ages & Populations'),
@@ -141,10 +141,10 @@ class Screen_Sixteen extends StatelessWidget {
   }
 }
 
-class MyFeatures extends StatelessWidget {
+class MyFeature_S16 extends StatelessWidget {
   var imageAddress, title, description;
 
-  MyFeatures(
+  MyFeature_S16(
       {super.key,
       required this.imageAddress,
       required this.title,

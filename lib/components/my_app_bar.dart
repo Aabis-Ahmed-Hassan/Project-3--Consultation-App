@@ -5,9 +5,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   var showImage; // this will decide that should we show image on the left side (leading) of the appbar or an icon
   var imageAddress;
   var iconName;
+  var showProfileImage; // on some screens, we don't want profile image to be displayed.
 
   MyAppBar(
-      {super.key, this.showImage = true, this.iconName, this.imageAddress});
+      {super.key,
+      this.showImage = true,
+      this.iconName,
+      this.imageAddress,
+      this.showProfileImage = true});
 
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -31,15 +36,17 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   )
                 : Icon(
                     iconName,
-                    color: Color(
+                    color: const Color(
                       0xff22215B,
                     ),
                   ),
-            CircleAvatar(
-              backgroundImage: AssetImage(
-                'assets/images/image_1.png',
-              ),
-            ),
+            showProfileImage
+                ? const CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/image_1.png',
+                    ),
+                  )
+                : Container(),
           ],
         ),
       ),
