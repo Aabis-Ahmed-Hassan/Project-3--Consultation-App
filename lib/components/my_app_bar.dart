@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  MyAppBar({super.key});
+  var showImage; // this will decide that should we show image on the left side (leading) of the appbar or an icon
+  var imageAddress;
+  var iconName;
+
+  MyAppBar(
+      {super.key, this.showImage = true, this.iconName, this.imageAddress});
 
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -10,16 +15,31 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     var height = MediaQuery.of(context).size.height * 1;
     var width = MediaQuery.of(context).size.width * 1;
     return AppBar(
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Icon(Icons.add),
-          Image(
-            height: 10,
-            width: 10,
-            image: AssetImage('assets/icons/icon_1.png'),
-          ),
-        ],
+      title: Padding(
+        padding: EdgeInsets.symmetric(horizontal: width * 0.0125),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            showImage
+                ? Image(
+                    height: height * 0.0275,
+                    image: AssetImage(
+                      imageAddress.toString(),
+                    ),
+                  )
+                : Icon(
+                    iconName,
+                    color: Color(
+                      0xff22215B,
+                    ),
+                  ),
+            CircleAvatar(
+              backgroundImage: AssetImage(
+                'assets/images/image_1.png',
+              ),
+            ),
+          ],
+        ),
       ),
       centerTitle: false,
       automaticallyImplyLeading: false,

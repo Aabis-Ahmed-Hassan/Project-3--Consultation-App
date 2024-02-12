@@ -1,4 +1,5 @@
-import 'package:arsalan_project_3/screens/screen_16.dart';
+import 'package:arsalan_project_3/screens/screen_27.dart';
+import 'package:arsalan_project_3/screens/screen_3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,12 +15,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MoveToScreen(title: 'Screen 16', shiftToScreen: Screen_Sixteen())
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MoveToScreen(
+                      title: 'Screen 3', shiftToScreen: Screen_Three()),
+                  MoveToScreen(
+                      title: 'Screen 27', shiftToScreen: Screen_Twenty_Seven()),
+                ],
+              ),
             ],
           ),
         ),
