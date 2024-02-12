@@ -1,6 +1,7 @@
 import 'package:arsalan_project_3/components/my_app_bar.dart';
 import 'package:arsalan_project_3/components/my_button.dart';
 import 'package:arsalan_project_3/constants/app_texts.dart';
+import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:flutter/material.dart';
 
 class Screen_Three extends StatelessWidget {
@@ -16,12 +17,13 @@ class Screen_Three extends StatelessWidget {
         iconName: Icons.arrow_back_ios_new_rounded,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+        padding: EdgeInsets.symmetric(
+            horizontal: width * MyPadding.scaffoldBodyPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: height * 0.05,
+              height: height * 0.01,
             ),
             const Text('Terms of Service', style: AppTexts.MyHeadingText),
             SizedBox(

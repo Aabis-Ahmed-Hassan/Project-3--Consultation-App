@@ -1,6 +1,7 @@
 import 'package:arsalan_project_3/components/my_app_bar.dart';
 import 'package:arsalan_project_3/components/my_button.dart';
 import 'package:arsalan_project_3/constants/app_texts.dart';
+import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:flutter/material.dart';
 
 class Screen_Twenty_Seven extends StatelessWidget {
@@ -15,12 +16,13 @@ class Screen_Twenty_Seven extends StatelessWidget {
         imageAddress: 'assets/icons/icon_1.png',
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+        padding: EdgeInsets.symmetric(
+            horizontal: width * MyPadding.scaffoldBodyPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: height * 0.05,
+              height: height * 0.01,
             ),
             const Text('Schedule A Call with Carrie',
                 style: AppTexts.MyNormalText),

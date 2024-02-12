@@ -1,3 +1,4 @@
+import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:flutter/material.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -16,7 +17,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     var width = MediaQuery.of(context).size.width * 1;
     return AppBar(
       title: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.0125),
+        padding:
+            EdgeInsets.symmetric(horizontal: width * MyPadding.appBarPadding),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
