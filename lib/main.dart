@@ -2,6 +2,7 @@ import 'package:arsalan_project_3/screens/screen_16.dart';
 import 'package:arsalan_project_3/screens/screen_27.dart';
 import 'package:arsalan_project_3/screens/screen_3.dart';
 import 'package:arsalan_project_3/screens/screen_5.dart';
+import 'package:arsalan_project_3/screens/screen_6.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,6 +28,14 @@ class MyApp extends StatelessWidget {
                 children: [
                   MoveToScreen(
                       title: 'Screen 3', shiftToScreen: Screen_Three()),
+                  MoveToScreen(
+                      title: 'Screen 27', shiftToScreen: Screen_Twenty_Seven()),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MoveToScreen(title: 'Screen 6', shiftToScreen: Screen_Six()),
                   MoveToScreen(
                       title: 'Screen 27', shiftToScreen: Screen_Twenty_Seven()),
                 ],
