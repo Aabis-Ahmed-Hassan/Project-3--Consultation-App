@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyTextFormField extends StatelessWidget {
-  String hintText;
+  var hintText;
   var prefixIcon;
   var showSuffix;
   var suffixIcon;
@@ -25,9 +25,9 @@ class MyTextFormField extends StatelessWidget {
           hintText: hintText,
           hintStyle: TextStyle(
             color: Color(0xffADAFB9),
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w400,
             fontSize: 14,
+            fontWeight: FontWeight.w400,
+            fontFamily: 'Poppins',
           ),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
@@ -39,13 +39,7 @@ class MyTextFormField extends StatelessWidget {
             color: Color(0xff408FAD),
             size: 18,
           ),
-          suffixIcon: showSuffix
-              ? Icon(
-                  prefixIcon,
-                  color: Color(0xffCECECE),
-                  size: 16,
-                )
-              : Container(),
+          // suffixIcon: showSuffix ? Icon(suffixIcon) : Container(),
         ),
       ),
     );

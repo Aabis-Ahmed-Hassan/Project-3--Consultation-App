@@ -3,8 +3,8 @@ import 'package:arsalan_project_3/components/my_text_form_field.dart';
 import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:flutter/material.dart';
 
-class Screen_Fifteen extends StatelessWidget {
-  const Screen_Fifteen({super.key});
+class Screen_Twenty extends StatelessWidget {
+  const Screen_Twenty({super.key});
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height * 1;
@@ -21,7 +21,7 @@ class Screen_Fifteen extends StatelessWidget {
               height: height * 0.15,
             ),
             const Text(
-              'Get Started',
+              'Welcome Back',
               style: TextStyle(
                 fontSize: 31,
                 fontWeight: FontWeight.w700,
@@ -30,7 +30,7 @@ class Screen_Fifteen extends StatelessWidget {
               ),
             ),
             const Text(
-              'Create an account to continue',
+              'Sign In to Continue',
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w400,
@@ -52,11 +52,38 @@ class Screen_Fifteen extends StatelessWidget {
               showSuffix: true,
               suffixIcon: Icons.add,
             ),
-            MyTextFormField(
-              hintText: 'Confirm Password',
-              prefixIcon: Icons.lock_outline,
-              showSuffix: true,
-              suffixIcon: Icons.add,
+            const Align(
+              alignment: Alignment.bottomRight,
+              child: Text(
+                'Forgot Password?',
+                style: TextStyle(
+                    fontSize: 13,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xff408FAD)),
+              ),
+            ),
+            Row(
+              children: [
+                Container(
+                  child: Checkbox(
+                      checkColor: Colors.white,
+                      activeColor: Color(0xff408FAD),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      value: true,
+                      onChanged: (myBool) {}),
+                ),
+                Text(
+                  'Keep me logged in',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff616161),
+                      fontFamily: 'Poppins'),
+                ),
+              ],
             ),
             SizedBox(
               height: height * 0.05,
@@ -118,7 +145,7 @@ class Screen_Fifteen extends StatelessWidget {
                             BorderSide(color: Color(0xff408FAD), width: 2.5)),
                   ),
                   child: const Text(
-                    'Sign In',
+                    'Create an account',
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Poppins',

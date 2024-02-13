@@ -89,10 +89,12 @@ class Screen_Six extends StatelessWidget {
             MyTextFormField(
               hintText: 'Name',
               prefixIcon: Icons.person_outline,
+              showSuffix: false,
             ),
             MyTextFormField(
               hintText: 'Email',
               prefixIcon: Icons.email_outlined,
+              showSuffix: false,
             ),
             Spacer(),
             MyButton(title: 'Save Changes'),
@@ -107,7 +109,6 @@ class Screen_Six extends StatelessWidget {
 }
 
 //Use less code below
-
 //
 // class MyFeature_S6 extends StatelessWidget {
 //   String hintText;
