@@ -1,5 +1,6 @@
 import 'package:arsalan_project_3/components/my_app_bar.dart';
 import 'package:arsalan_project_3/components/my_button.dart';
+import 'package:arsalan_project_3/components/my_text_form_field.dart';
 import 'package:arsalan_project_3/constants/app_texts.dart';
 import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -85,11 +86,11 @@ class Screen_Six extends StatelessWidget {
             SizedBox(
               height: height * 0.075,
             ),
-            MyFeature_S6(
+            MyTextFormField(
               hintText: 'Name',
               prefixIcon: Icons.person_outline,
             ),
-            MyFeature_S6(
+            MyTextFormField(
               hintText: 'Email',
               prefixIcon: Icons.email_outlined,
             ),
@@ -105,34 +106,37 @@ class Screen_Six extends StatelessWidget {
   }
 }
 
-class MyFeature_S6 extends StatelessWidget {
-  String hintText;
-  var prefixIcon;
-  MyFeature_S6({super.key, required this.hintText, required this.prefixIcon});
+//Use less code below
 
-  @override
-  Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height * 1;
-    var width = MediaQuery.of(context).size.width * 1;
-    return Container(
-      margin: EdgeInsets.only(bottom: height * 0.02),
-      child: TextFormField(
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(
-              horizontal: width * 0.065, vertical: height * 0.0185),
-          hintText: hintText,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide.none),
-          fillColor: Color(0xffF5F5F5),
-          filled: true,
-          prefixIcon: Icon(
-            prefixIcon,
-            color: Color(0xff408FAD),
-            size: 18,
-          ),
-        ),
-      ),
-    );
-  }
-}
+//
+// class MyFeature_S6 extends StatelessWidget {
+//   String hintText;
+//   var prefixIcon;
+//   MyFeature_S6({super.key, required this.hintText, required this.prefixIcon});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     var height = MediaQuery.of(context).size.height * 1;
+//     var width = MediaQuery.of(context).size.width * 1;
+//     return Container(
+//       margin: EdgeInsets.only(bottom: height * 0.02),
+//       child: TextFormField(
+//         decoration: InputDecoration(
+//           contentPadding: EdgeInsets.symmetric(
+//               horizontal: width * 0.065, vertical: height * 0.0185),
+//           hintText: hintText,
+//           border: OutlineInputBorder(
+//               borderRadius: BorderRadius.circular(30),
+//               borderSide: BorderSide.none),
+//           fillColor: Color(0xffF5F5F5),
+//           filled: true,
+//           prefixIcon: Icon(
+//             prefixIcon,
+//             color: Color(0xff408FAD),
+//             size: 18,
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

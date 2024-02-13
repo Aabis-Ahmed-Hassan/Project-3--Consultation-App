@@ -1,5 +1,7 @@
 import 'package:arsalan_project_3/screens/screen_11.dart';
 import 'package:arsalan_project_3/screens/screen_12.dart';
+import 'package:arsalan_project_3/screens/screen_14.dart';
+import 'package:arsalan_project_3/screens/screen_15.dart';
 import 'package:arsalan_project_3/screens/screen_16.dart';
 import 'package:arsalan_project_3/screens/screen_27.dart';
 import 'package:arsalan_project_3/screens/screen_3.dart';
@@ -38,9 +40,18 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   MoveToScreen(
+                      title: 'Screen 15', shiftToScreen: Screen_Fifteen()),
+                  MoveToScreen(
+                      title: 'Screen 14', shiftToScreen: Screen_Fourteen()),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MoveToScreen(
                       title: 'Screen 12', shiftToScreen: Screen_Twelve()),
                   MoveToScreen(
-                      title: 'Screen 27', shiftToScreen: Screen_Twenty_Seven()),
+                      title: 'Screen 14', shiftToScreen: Screen_Fourteen()),
                 ],
               ),
               Row(
