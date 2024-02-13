@@ -9,6 +9,7 @@ import 'package:arsalan_project_3/screens/screen_27.dart';
 import 'package:arsalan_project_3/screens/screen_3.dart';
 import 'package:arsalan_project_3/screens/screen_5.dart';
 import 'package:arsalan_project_3/screens/screen_6.dart';
+import 'package:arsalan_project_3/screens/test_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -84,6 +85,15 @@ class MyApp extends StatelessWidget {
                 children: [
                   MoveToScreen(
                       title: 'Screen 20', shiftToScreen: const Screen_Twenty()),
+                  MoveToScreen(
+                      title: 'Screen 10', shiftToScreen: const Screen_Ten()),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MoveToScreen(
+                      title: 'Test screen', shiftToScreen: const TestScreen()),
                   MoveToScreen(
                       title: 'Screen 10', shiftToScreen: const Screen_Ten()),
                 ],

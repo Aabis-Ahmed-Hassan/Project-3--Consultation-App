@@ -42,7 +42,7 @@ class Screen_Ten extends StatelessWidget {
                     Image(
                       height: height * 0.2,
                       fit: BoxFit.fill,
-                      image: const AssetImage('assets/images/image_10.png'),
+                      image: AssetImage('assets/images/image_14.png'),
                     ),
                     Positioned(
                         top: height * 0.04,
@@ -50,7 +50,7 @@ class Screen_Ten extends StatelessWidget {
                         child: Image(
                             height: height * 0.03,
                             image: const AssetImage(
-                                'assets/images/image_11.png'))),
+                                'assets/images/image_13.png'))),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,

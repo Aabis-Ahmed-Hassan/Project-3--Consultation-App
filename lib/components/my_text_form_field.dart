@@ -39,7 +39,13 @@ class MyTextFormField extends StatelessWidget {
             color: Color(0xff408FAD),
             size: 18,
           ),
-          // suffixIcon: showSuffix ? Icon(suffixIcon) : Container(),
+          suffixIcon: showSuffix
+              ? Icon(
+                  suffixIcon,
+                  color: Color(0xffCECECE),
+                  size: 17,
+                )
+              : Icon(null),
         ),
       ),
     );

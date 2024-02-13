@@ -50,7 +50,7 @@ class Screen_Twenty extends StatelessWidget {
               hintText: 'Password',
               prefixIcon: Icons.email_outlined,
               showSuffix: true,
-              suffixIcon: Icons.add,
+              suffixIcon: Icons.remove_red_eye_rounded,
             ),
             const Align(
               alignment: Alignment.bottomRight,
@@ -65,16 +65,14 @@ class Screen_Twenty extends StatelessWidget {
             ),
             Row(
               children: [
-                Container(
-                  child: Checkbox(
-                      checkColor: Colors.white,
-                      activeColor: Color(0xff408FAD),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      value: true,
-                      onChanged: (myBool) {}),
-                ),
+                Checkbox(
+                    checkColor: Colors.white,
+                    activeColor: Color(0xff6fb489),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    value: true,
+                    onChanged: (myBool) {}),
                 Text(
                   'Keep me logged in',
                   style: TextStyle(

@@ -50,13 +50,13 @@ class Screen_Fifteen extends StatelessWidget {
               hintText: 'Password',
               prefixIcon: Icons.email_outlined,
               showSuffix: true,
-              suffixIcon: Icons.add,
+              suffixIcon: Icons.remove_red_eye_rounded,
             ),
             MyTextFormField(
               hintText: 'Confirm Password',
               prefixIcon: Icons.lock_outline,
               showSuffix: true,
-              suffixIcon: Icons.add,
+              suffixIcon: Icons.remove_red_eye_rounded,
             ),
             SizedBox(
               height: height * 0.05,
