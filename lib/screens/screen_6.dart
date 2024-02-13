@@ -1,4 +1,5 @@
 import 'package:arsalan_project_3/components/my_app_bar.dart';
+import 'package:arsalan_project_3/components/my_button.dart';
 import 'package:arsalan_project_3/constants/app_texts.dart';
 import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -23,56 +24,80 @@ class Screen_Six extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: height * 0.01,
+              height: height * 0.02,
             ),
             const Text('Edit Profile Info', style: AppTexts.MyNormalText),
             SizedBox(
-              height: height * 0.025,
+              height: height * 0.05,
             ),
             Align(
               alignment: Alignment.center,
-              child: Column(
+              child: Stack(
                 children: [
-                  DottedBorder(
-                    borderType: BorderType.RRect,
-                    radius: Radius.circular(100),
-                    color: Color(0xff408FAD),
-                    strokeWidth: 5,
-                    dashPattern: [25, 10],
-                    child: CircleAvatar(
-                      radius: height * 0.085,
-                      backgroundImage:
-                          const AssetImage('assets/images/image_1.png'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: height * 0.025,
-                  ),
-                  const Text(
-                    'Michael Oliver',
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Color(0xff163B61),
-                        fontWeight: FontWeight.w700,
-                        fontFamily: 'Poppins'),
-                  ),
-                  const Text(
-                    'Los Angeles, USA',
-                    style: TextStyle(
-                        fontSize: 13,
+                  Column(
+                    children: [
+                      DottedBorder(
+                        borderType: BorderType.RRect,
+                        radius: Radius.circular(100),
                         color: Color(0xff408FAD),
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'Poppins'),
+                        strokeWidth: 5,
+                        dashPattern: [25, 10],
+                        child: CircleAvatar(
+                          radius: height * 0.085,
+                          backgroundImage:
+                              const AssetImage('assets/images/image_1.png'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.025,
+                      ),
+                    ],
                   ),
+                  Positioned(
+                    bottom: 0,
+                    right: 1 / 2,
+                    left: 1 / 2,
+                    child: Center(
+                      child: Container(
+                        alignment: Alignment.bottomCenter,
+                        height: height * 0.06,
+                        width: height * 0.06,
+                        decoration: BoxDecoration(
+                          color: Color(0xff6FB489),
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 3,
+                          ),
+                        ),
+                        child: Center(
+                          child: Image(
+                            height: height * 0.0225,
+                            image: AssetImage('assets/icons/icon_2.png'),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
             SizedBox(
-              height: height * 0.04,
+              height: height * 0.075,
             ),
-            MyFeature_S5(title: 'Profile Info'),
-            MyFeature_S5(title: 'Change Password'),
-            MyFeature_S5(title: 'Payment Method'),
+            MyFeature_S6(
+              hintText: 'Name',
+              prefixIcon: Icons.person_outline,
+            ),
+            MyFeature_S6(
+              hintText: 'Email',
+              prefixIcon: Icons.email_outlined,
+            ),
+            Spacer(),
+            MyButton(title: 'Save Changes'),
+            SizedBox(
+              height: height * 0.06,
+            ),
           ],
         ),
       ),
@@ -80,52 +105,33 @@ class Screen_Six extends StatelessWidget {
   }
 }
 
-class MyFeature_S5 extends StatelessWidget {
-  String title;
-  MyFeature_S5({super.key, required this.title});
+class MyFeature_S6 extends StatelessWidget {
+  String hintText;
+  var prefixIcon;
+  MyFeature_S6({super.key, required this.hintText, required this.prefixIcon});
 
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height * 1;
     var width = MediaQuery.of(context).size.width * 1;
     return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: width * 0.075, vertical: height * 0.02),
-      margin: EdgeInsets.only(bottom: height * 0.025),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: const Color(
-          0xffE5F1EA,
+      margin: EdgeInsets.only(bottom: height * 0.02),
+      child: TextFormField(
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(
+              horizontal: width * 0.065, vertical: height * 0.0185),
+          hintText: hintText,
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30),
+              borderSide: BorderSide.none),
+          fillColor: Color(0xffF5F5F5),
+          filled: true,
+          prefixIcon: Icon(
+            prefixIcon,
+            color: Color(0xff408FAD),
+            size: 18,
+          ),
         ),
-      ),
-      // height: height * 0.05,
-      width: double.infinity,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: Color(0xff000000),
-              fontFamily: 'Poppins',
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(
-                horizontal: width * 0.015, vertical: width * 0.015),
-            decoration: BoxDecoration(
-              color: Color(0xff70BEB0),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Icon(
-              Icons.arrow_forward_ios_rounded,
-              color: Colors.white,
-              size: 18,
-            ),
-          ),
-        ],
       ),
     );
   }

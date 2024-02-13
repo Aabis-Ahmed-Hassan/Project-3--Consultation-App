@@ -22,7 +22,7 @@ class Screen_Twenty_Seven extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: height * 0.01,
+              height: height * 0.02,
             ),
             const Text('Schedule A Call with Carrie',
                 style: AppTexts.MyNormalText),
@@ -41,11 +41,8 @@ class Screen_Twenty_Seven extends StatelessWidget {
                 "Schedule a Zoom call for questions and \nconcerns : \n* Lesson Plans\n* Class Management\n* IEPs\n* Advocacy",
                 style: AppTexts.MyParagraphText),
             Spacer(),
-            Align(
-              alignment: Alignment.center,
-              child: MyButton(
-                title: 'Schedule A Call',
-              ),
+            MyButton(
+              title: 'Schedule A Call',
             ),
             SizedBox(
               height: height * 0.25,

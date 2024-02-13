@@ -23,7 +23,7 @@ class Screen_Three extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: height * 0.01,
+              height: height * 0.02,
             ),
             const Text('Terms of Service', style: AppTexts.MyHeadingText),
             SizedBox(

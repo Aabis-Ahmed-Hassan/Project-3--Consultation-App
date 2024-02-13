@@ -3,8 +3,8 @@ import 'package:arsalan_project_3/constants/app_texts.dart';
 import 'package:arsalan_project_3/constants/default_padding.dart';
 import 'package:flutter/material.dart';
 
-class Screen_Sixteen extends StatelessWidget {
-  const Screen_Sixteen({super.key});
+class Screen_Eleven extends StatelessWidget {
+  const Screen_Eleven({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,8 @@ class Screen_Sixteen extends StatelessWidget {
     var width = MediaQuery.of(context).size.width * 1;
     return Scaffold(
       appBar: MyAppBar(
-        imageAddress: 'assets/icons/icon_1.png',
+        showImage: false,
+        iconName: Icons.arrow_back_ios_new_rounded,
       ),
       body: SingleChildScrollView(
         child: Padding(
