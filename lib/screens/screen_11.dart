@@ -25,29 +25,34 @@ class Screen_Eleven extends StatelessWidget {
               SizedBox(
                 height: height * 0.02,
               ),
-              const Text('Select a Category', style: AppTexts.MyNormalText),
-              const Text('Home', style: AppTexts.MyHeadingText),
+              const Text('Consulting for Schools',
+                  style: AppTexts.MyNormalText),
+              const Text('Modalities', style: AppTexts.MyHeadingText),
               SizedBox(
                 height: height * 0.025,
               ),
               Row(
                 children: [
                   Expanded(
-                    child: MyFeature_S16(
-                        imageAddress: 'assets/images/image_2.png',
-                        title: 'Free Live Webinars',
-                        description:
-                            'For Teachers/Administration/Parents - Wednesdays'),
+                    child: MyFeature_S11(
+                      imageAddress: 'assets/icons/icon_3.png',
+                      title: '1 Hour Staff Meeting',
+                      description:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      color: Color(0xff408FAD),
+                    ),
                   ),
                   SizedBox(
                     width: width * 0.075,
                   ),
                   Expanded(
-                    child: MyFeature_S16(
-                        imageAddress: 'assets/images/image_3.png',
-                        title: 'Teacher Training',
-                        description:
-                            'Add to your bag of tricks. For teachers - 75 min recorded presentations'),
+                    child: MyFeature_S11(
+                      imageAddress: 'assets/icons/icon_3.png',
+                      title: 'Half Day',
+                      description:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      color: Color(0xff70BEB0),
+                    ),
                   ),
                 ],
               ),
@@ -57,82 +62,27 @@ class Screen_Eleven extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: MyFeature_S16(
-                        imageAddress: 'assets/images/image_4.png',
-                        title: 'Professional Development for schools',
-                        description:
-                            'Carrie’s consulting and coaching for schools'),
+                    child: MyFeature_S11(
+                      imageAddress: 'assets/icons/icon_3.png',
+                      title: 'Full Day',
+                      description:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      color: Color(0xff163B61),
+                    ),
                   ),
                   SizedBox(
                     width: width * 0.075,
                   ),
                   Expanded(
-                    child: MyFeature_S16(
-                        imageAddress: 'assets/images/image_5.png',
-                        title: 'Personalised PE lessons',
-                        description: 'All Ages & Populations'),
+                    child: MyFeature_S11(
+                      imageAddress: 'assets/icons/icon_3.png',
+                      title: 'Ongoing Consulting',
+                      description:
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      color: Color(0xff6FB489),
+                    ),
                   ),
                 ],
-              ),
-              SizedBox(
-                height: height * 0.0175,
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                    horizontal: width * 0.03, vertical: height * 0.0175),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xffECECEC),
-                  ),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 7,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: height * 0.015,
-                          ),
-                          Text(
-                            'Tip of the week',
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                          SizedBox(
-                            height: height * 0.01,
-                          ),
-                          Text(
-                            'Lorem ipsum dolor sit amet, consectetur elit.',
-                            style: const TextStyle(
-                              fontSize: 10,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      flex: 5,
-                      child: Image(
-                        image: AssetImage(
-                          'assets/images/image_6.png',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),
@@ -142,14 +92,17 @@ class Screen_Eleven extends StatelessWidget {
   }
 }
 
-class MyFeature_S16 extends StatelessWidget {
+class MyFeature_S11 extends StatelessWidget {
   var imageAddress, title, description;
 
-  MyFeature_S16(
-      {super.key,
-      required this.imageAddress,
-      required this.title,
-      required this.description});
+  var color;
+  MyFeature_S11({
+    super.key,
+    required this.imageAddress,
+    required this.title,
+    required this.description,
+    required this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -158,54 +111,58 @@ class MyFeature_S16 extends StatelessWidget {
 
     return Container(
         padding: EdgeInsets.symmetric(
-            horizontal: width * 0.03, vertical: height * 0.0175),
+            horizontal: width * 0.0325, vertical: height * 0.0325),
         decoration: BoxDecoration(
-          border: Border.all(
-            color: const Color(0xffECECEC),
-          ),
+          color: color,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image(
-              image: AssetImage(
-                imageAddress.toString(),
+            Center(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                    horizontal: width * 0.015, vertical: height * 0.015),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Color(0xffFFFFFF), width: 0.75),
+                  borderRadius: BorderRadius.circular(7),
+                ),
+                child: Image(
+                  height: height * 0.0225,
+                  image: AssetImage(
+                    imageAddress.toString(),
+                  ),
+                ),
               ),
             ),
-            //wrapping the following widgets in padding because figma design shows some space on the left side of the text.
-            //The text is not aligned with the image.
-            Padding(
-              padding: EdgeInsets.only(left: width * 0.025),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: height * 0.015,
+            Column(
+              children: [
+                SizedBox(
+                  height: height * 0.015,
+                ),
+                Text(
+                  title.toString(),
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xffFFFFFF),
                   ),
-                  Text(
-                    title.toString(),
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xff000000),
-                    ),
+                ),
+                SizedBox(
+                  height: height * 0.01,
+                ),
+                Text(
+                  description.toString(),
+                  style: const TextStyle(
+                    fontSize: 10,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xffFFFFFF),
                   ),
-                  SizedBox(
-                    height: height * 0.01,
-                  ),
-                  Text(
-                    description.toString(),
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff000000),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ));
