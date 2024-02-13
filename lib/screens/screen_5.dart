@@ -17,63 +17,65 @@ class Screen_Five extends StatelessWidget {
         iconName: Icons.arrow_back_ios_new_rounded,
         showProfileImage: false,
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: width * MyPadding.scaffoldBodyPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: height * 0.02,
-            ),
-            const Text('Profile', style: AppTexts.MyNormalText),
-            SizedBox(
-              height: height * 0.025,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Column(
-                children: [
-                  DottedBorder(
-                      borderType: BorderType.RRect,
-                      radius: Radius.circular(100),
-                      color: Color(0xff408FAD),
-                      strokeWidth: 5,
-                      dashPattern: [25, 10],
-                      child: CircleAvatar(
-                        radius: height * 0.07,
-                        backgroundImage:
-                            const AssetImage('assets/images/image_1.png'),
-                      )),
-                  SizedBox(
-                    height: height * 0.025,
-                  ),
-                  const Text(
-                    'Michael Oliver',
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Color(0xff163B61),
-                        fontWeight: FontWeight.w700,
-                        fontFamily: 'Poppins'),
-                  ),
-                  const Text(
-                    'Los Angeles, USA',
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Color(0xff408FAD),
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'Poppins'),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: width * MyPadding.scaffoldBodyPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: height * 0.02,
               ),
-            ),
-            SizedBox(
-              height: height * 0.04,
-            ),
-            MyFeature_S5(title: 'Profile Info'),
-            MyFeature_S5(title: 'Change Password'),
-            MyFeature_S5(title: 'Payment Method'),
-          ],
+              const Text('Profile', style: AppTexts.MyNormalText),
+              SizedBox(
+                height: height * 0.025,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Column(
+                  children: [
+                    DottedBorder(
+                        borderType: BorderType.RRect,
+                        radius: Radius.circular(100),
+                        color: Color(0xff408FAD),
+                        strokeWidth: 5,
+                        dashPattern: [25, 10],
+                        child: CircleAvatar(
+                          radius: height * 0.07,
+                          backgroundImage:
+                              const AssetImage('assets/images/image_1.png'),
+                        )),
+                    SizedBox(
+                      height: height * 0.025,
+                    ),
+                    const Text(
+                      'Michael Oliver',
+                      style: TextStyle(
+                          fontSize: 21,
+                          color: Color(0xff163B61),
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Poppins'),
+                    ),
+                    const Text(
+                      'Los Angeles, USA',
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: Color(0xff408FAD),
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'Poppins'),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height * 0.04,
+              ),
+              MyFeature_S5(title: 'Profile Info'),
+              MyFeature_S5(title: 'Change Password'),
+              MyFeature_S5(title: 'Payment Method'),
+            ],
+          ),
         ),
       ),
     );

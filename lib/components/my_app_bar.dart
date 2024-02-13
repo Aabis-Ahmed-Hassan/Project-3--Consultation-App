@@ -28,26 +28,16 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             showImage
-                ? InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Image(
-                      height: height * 0.0275,
-                      image: AssetImage(
-                        imageAddress.toString(),
-                      ),
+                ? Image(
+                    height: height * 0.0275,
+                    image: AssetImage(
+                      imageAddress.toString(),
                     ),
                   )
-                : InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      iconName,
-                      color: const Color(
-                        0xff22215B,
-                      ),
+                : Icon(
+                    iconName,
+                    color: const Color(
+                      0xff22215B,
                     ),
                   ),
             showProfileImage

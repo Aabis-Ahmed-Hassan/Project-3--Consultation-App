@@ -146,6 +146,7 @@ class MyFeature_S12 extends StatelessWidget {
                 ),
                 Row(
                   children: [
+                    //using image for both the icons because I found icon for only one of them. so in order to make sure that both of them have same sizes/styles/layout, I've image for both
                     Image(
                       image: const AssetImage(
                         'assets/icons/icon_4.png',

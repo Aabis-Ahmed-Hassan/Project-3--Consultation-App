@@ -39,8 +39,8 @@ class Screen_Six extends StatelessWidget {
                     children: [
                       DottedBorder(
                         borderType: BorderType.RRect,
-                        radius: Radius.circular(100),
-                        color: Color(0xff408FAD),
+                        radius: const Radius.circular(100),
+                        color: const Color(0xff408FAD),
                         strokeWidth: 5,
                         dashPattern: [25, 10],
                         child: CircleAvatar(
@@ -64,7 +64,7 @@ class Screen_Six extends StatelessWidget {
                         height: height * 0.06,
                         width: height * 0.06,
                         decoration: BoxDecoration(
-                          color: Color(0xff6FB489),
+                          color: const Color(0xff6FB489),
                           borderRadius: BorderRadius.circular(50),
                           border: Border.all(
                             color: Colors.white,
@@ -74,7 +74,7 @@ class Screen_Six extends StatelessWidget {
                         child: Center(
                           child: Image(
                             height: height * 0.0225,
-                            image: AssetImage('assets/icons/icon_2.png'),
+                            image: const AssetImage('assets/icons/icon_2.png'),
                           ),
                         ),
                       ),
@@ -96,7 +96,7 @@ class Screen_Six extends StatelessWidget {
               prefixIcon: Icons.email_outlined,
               showSuffix: false,
             ),
-            Spacer(),
+            const Spacer(),
             MyButton(title: 'Save Changes'),
             SizedBox(
               height: height * 0.06,

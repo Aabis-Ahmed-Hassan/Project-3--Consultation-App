@@ -1,9 +1,9 @@
+import 'package:arsalan_project_3/screens/screen_10.dart';
 import 'package:arsalan_project_3/screens/screen_11.dart';
 import 'package:arsalan_project_3/screens/screen_12.dart';
 import 'package:arsalan_project_3/screens/screen_14.dart';
 import 'package:arsalan_project_3/screens/screen_15.dart';
 import 'package:arsalan_project_3/screens/screen_16.dart';
-import 'package:arsalan_project_3/screens/screen_2.dart';
 import 'package:arsalan_project_3/screens/screen_20.dart';
 import 'package:arsalan_project_3/screens/screen_27.dart';
 import 'package:arsalan_project_3/screens/screen_3.dart';
@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
                   MoveToScreen(
                       title: 'Screen 20', shiftToScreen: const Screen_Twenty()),
                   MoveToScreen(
-                      title: 'Screen 2', shiftToScreen: const Screen_Two()),
+                      title: 'Screen 10', shiftToScreen: const Screen_Ten()),
                 ],
               ),
             ],
