@@ -1,6 +1,7 @@
 import 'package:arsalan_project_3/screens/screen_10.dart';
 import 'package:arsalan_project_3/screens/screen_11.dart';
 import 'package:arsalan_project_3/screens/screen_12.dart';
+import 'package:arsalan_project_3/screens/screen_13.dart';
 import 'package:arsalan_project_3/screens/screen_14.dart';
 import 'package:arsalan_project_3/screens/screen_15.dart';
 import 'package:arsalan_project_3/screens/screen_16.dart';
@@ -9,6 +10,7 @@ import 'package:arsalan_project_3/screens/screen_27.dart';
 import 'package:arsalan_project_3/screens/screen_3.dart';
 import 'package:arsalan_project_3/screens/screen_5.dart';
 import 'package:arsalan_project_3/screens/screen_6.dart';
+import 'package:arsalan_project_3/screens/screen_9.dart';
 import 'package:arsalan_project_3/screens/test_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -96,6 +98,16 @@ class MyApp extends StatelessWidget {
                       title: 'Test screen', shiftToScreen: const TestScreen()),
                   MoveToScreen(
                       title: 'Screen 10', shiftToScreen: const Screen_Ten()),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MoveToScreen(
+                      title: 'Screen 9', shiftToScreen: const Screen_Nine()),
+                  MoveToScreen(
+                      title: 'Screen 13',
+                      shiftToScreen: const Screen_Thirteen()),
                 ],
               ),
             ],
