@@ -149,6 +149,22 @@ class MyWebinar extends StatelessWidget {
                     ),
                   ),
                 ),
+                Container(
+                  padding: EdgeInsets.all(width * 0.037),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
+                  ),
+                  child: Center(
+                    child: Image(
+                        image: AssetImage(
+                      'assets/icons/icon_9.png',
+                    )),
+                  ),
+                ),
               ],
             ),
             SizedBox(
